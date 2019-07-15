@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+<div id="app">
+    {{text}}
+    <button v-on:click="fun1('點擊一次後的結果')">點擊</button>
+</div>
+
+</body>
+
+<script>
+
+    new Vue({
+        el:'#app',
+        data:{
+            text:'hello,vue',
+        },
+        methods:{
+            fun1:function (msg) {
+                alert("點擊一次")
+                this.text=msg;
+            }
+        }
+    })
+</script>
+</html>
